@@ -1,6 +1,6 @@
 
 <?php
-$connect=mysqli_connect('localhost','root','password','Users');
+$connect=mysqli_connect('localhost','root','password', 'notespool');
 
 if(mysqli_connect_errno($connect))
 {
