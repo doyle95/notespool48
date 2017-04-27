@@ -21,6 +21,7 @@ $sql = "INSERT INTO Users(userName, password) VALUES ('$name', '$password_hash')
 
 if ($connect->query($sql) === TRUE) {
     echo "New record created successfully";
+    header('Location: showdata.php');
 } else {
     echo "Error: " . $sql . "<br>" . $connect->error;
 }
