@@ -16,10 +16,10 @@ $raw_results      = $db->query("SELECT * FROM Users");
       while ($results = $raw_results->fetch(PDO::FETCH_ASSOC)) {
           // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
 
-          
+
 
           echo "<tr>";
-          echo "<td>" . "</td><td>" . $results'id']. $results['userName'] . "</td><td>" . $results['password'] . "</td>";
+          echo "<td>" . "</td><td>" . $results['id']. $results['userName'] . "</td><td>" . $results['password'] . "</td>";
           echo "</tr>";
           // posts results gotten from database(title and text) you can also show id ($results['id'])
       }
