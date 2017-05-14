@@ -1,0 +1,309 @@
+
+.wrapper {
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 15px 100px 15px;
+    min-height: 640px;
+
+    background: url('../img/bg.png') no-repeat;
+    background-size: cover;
+}
+
+/* CSS Document */
+
+body {
+    background: transparent;
+    font-size: 22px;
+    line-height: 32px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word !important;
+    font-family: 'Maria Pro', Maria, sans-serif;
+}
+a,p,h1,h2,h3,h4,h5,input,textarea,button,label{
+    font-family: Verdana, sans-serif,'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+a,p,input,textarea,button,label{
+    font-size: 16px;
+}
+
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+#logo {
+    display: block;
+    padding: 0;
+    margin:0;
+    float: left;
+    font-size: 50px;
+    line-height: 60px;
+}
+#logo span{
+    font-weight: 700;
+}
+.search-custom{
+   margin-top: 20px !important;
+}
+.search-custom-input{
+    border-bottom-left-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+
+}
+.search-custom-input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+
+}
+.search-custom-button{
+    border-bottom-right-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    background: #2595F8 !important;
+    color: #fff !important;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+nav{
+    margin-top: 20px !important;
+}
+
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: transparent;
+}
+
+/* Styling the links */
+nav a{
+    display: block;
+    padding: 14px 20px;
+    color: #FFF;
+    font-size: 17px;
+    text-decoration: none;
+    font-family: "Myriad Regular", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+nav label.toggle{
+    text-transform: uppercase;
+}
+ nav ul li ul li {
+    border-bottom: 1px solid #fff;
+    background-color: #2595F8;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+nav ul li ul li:hover {
+    background: #2595F8;
+}
+
+
+.menu li.active{
+    box-shadow: inset 0 2px 0 0  #5DC7EF;
+}
+.menu li:hover {
+    box-shadow: inset 0 2px 0 0  #2595F8;
+
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 60px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+/* Second, Third and more Tiers
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after {
+    content: '';
+}
+
+li > a:only-child:after {
+    content: '';
+}
+/*Login Form*/
+.login-form{
+    margin: 0 auto;
+    color: #000;
+    background: #fff;
+}
+/*End Login Form*/
+.custom-btn-reaource{
+    min-width: 250px !important;
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media  all and (max-width: 1100px){
+    .wrapper{
+        padding: 10px 20px 20px;
+    }
+}
+@media all and (max-width: 768px) {
+    .wrapper{
+        padding: 5px 10px 10px;
+    }
+    nav {
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle{
+        display: block;
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+        text-decoration: none;
+        border: none;
+        font-family: "Myriad Regular", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .menu-heading {
+        background-color: #2595F8;
+    }
+    .menu-heading:hover {
+        background-color: #5DC7EF;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked + ul {
+        display: block;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: transparent;
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+
+    nav ul li ul li .toggle
+    {
+        background-color: #2595F8;
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+
+    }
+
+}
+
+@media all and (max-width: 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+}
