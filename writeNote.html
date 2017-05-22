@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IFB101</title>
+    <title>Home Page</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style/core.css">
     <link rel="stylesheet" href="style/main.css">
+	<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
 
 </head>
 <body>
@@ -55,20 +57,33 @@
     </div>
     <!--End Header-->
     <!--Body-->
-    <div class="ncss-row">
-        <div class="ncss-col l12 m12 ncss-center">
-            <a href="upload.html" class="ncss-btn ncss-btn-jumbo  custom-btn-resource">Upload</a>
-            <a href="writeNote.html" class="ncss-btn ncss-btn-jumbo custom-btn-resource">Write Notes</a>
-            <a href="viewNotes.html" class="ncss-btn ncss-btn-jumbo custom-btn-resource">View Notes</a>
-            <a href="createQuiz.html" class="ncss-btn ncss-btn-jumbo custom-btn-resource">Create Quiz</a>
-        </div>
-    </div>
-    <div class="ncss-row">
-        <div class="ncss-col l12 m12 s12 ncss-center">
-            <p><a href="availableQuiz.html" class="ncss-btn ncss-btn-jumbo ncss-blue custom-btn-resource">Practice Available Quizzes !</a></p>
 
+    <div class="ncss-row">
+        <div class="ncss-col l6 m6 s12 offset-l3 offset-m3">
+            <div class="basic_page">
+                <form action="viewNotes.html">
+                    <div class="ncss-container">
+                        <h5 class="text-center ncss-border-bottom ncss-text-primary"> Write Notes </h5>
+                    </div>
+                    <div class="ncss-margin-bottom">
+                        <div class="ncss-row-padding">
+                            <div class="ncss-col l12 m12 s12">
+                                <textarea class="ncss-texarea ncss-texarea-jumbo" placeholder="Write Note Here"></textarea>
+                            </div>
+                            <div class="ncss-col l12 m12 s12">
+                                <input type="submit"  value="Submit" class="ncss-btn ncss-blue ncss-btn-mobile ncss-margin-bottom" >
+                                <input type="submit"  value="Save As Draft" class="ncss-btn ncss-btn-mobile ncss-border-blue ncss-margin-bottom" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
+
     </div>
+
+
     <!--End Body-->
     <!--Footer-->
     <div class="ncss-row ncss-margin-zero">
@@ -90,7 +105,11 @@
     </div>
     <!--End Footer-->
 
+
 </div>
+<script>
+
+</script>
 </body>
 </html>
 

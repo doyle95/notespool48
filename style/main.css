@@ -1,13 +1,12 @@
 
 .wrapper {
-    text-align: center;
-    text-rendering: optimizeLegibility;
-    margin: 0;
     padding: 15px 100px 15px;
-    min-height: 640px;
-
-    background: url('../img/bg.png') no-repeat;
+    background: url('../img/bg.png')repeat-y;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ccc;
 }
 
 /* CSS Document */
@@ -22,7 +21,7 @@ body {
     word-wrap: break-word !important;
     font-family: 'Maria Pro', Maria, sans-serif;
 }
-a,p,h1,h2,h3,h4,h5,input,textarea,button,label{
+html,body,a,p,h1,h2,h3,h4,h5,input,textarea,select,button,label{
     font-family: Verdana, sans-serif,'Roboto', sans-serif;
     /*font-family: 'Roboto', sans-serif;*/
 }
@@ -44,15 +43,17 @@ nav {
     margin-bottom: 10px;
 }
 
-#logo {
+#logo a {
     display: block;
     padding: 0;
     margin:0;
     float: left;
     font-size: 50px;
     line-height: 60px;
+    color: #fff;
+    text-decoration: none;
 }
-#logo span{
+#logo a span{
     font-weight: 700;
 }
 .search-custom{
@@ -122,6 +123,7 @@ nav label.toggle{
     text-transform: uppercase;
 }
  nav ul li ul li {
+    z-index: 999;
     border-bottom: 1px solid #fff;
     background-color: #2595F8;
     opacity: 0.5;
@@ -130,6 +132,7 @@ nav label.toggle{
 
 nav ul li ul li:hover {
     background: #2595F8;
+    z-index: 999;
 }
 
 
@@ -186,18 +189,66 @@ li > a:only-child:after {
 .login-form{
     margin: 0 auto;
     color: #000;
-    background: #fff;
+    background: #F0F1F7;
+}
+.basic_page{
+    text-align: left !important;
+    color: #000;
+    background: #F0F1F7;
+	padding: 10px 20px 30px;
 }
 /*End Login Form*/
-.custom-btn-reaource{
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-btn-resource {
     min-width: 250px !important;
+    border:1px solid #2595F8;
+    background: #e8e8e8;
+    color: #2595F8;
+    border-radius: 5px;
+    font-width:700;
+
+}
+.custom-btn-resource:hover {
+    min-width: 250px !important;
+    border:1px solid #2595F8;
+    background: #2595F8;
+    color: #fff;
+    border-radius: 5px;
+    font-width:700;
+
+}
+.footer img{
+    width:100%;
+    height:auto;
 }
 
 /* Media Queries
 --------------------------------------------- */
 @media  all and (max-width: 1100px){
     .wrapper{
-        padding: 10px 20px 20px;
+        padding: 15px 100px 15px;
+        background: url('../img/bg.png')repeat-y;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: #ccc;
+        min-height:1000px;
     }
 }
 @media all and (max-width: 768px) {
@@ -206,6 +257,7 @@ li > a:only-child:after {
     }
     nav {
         margin: 0;
+        margin-bottom: 5px;
     }
 
     /* Hide the navigation menu by default */
@@ -306,4 +358,9 @@ li > a:only-child:after {
         width: 94%;
     }
 
+}
+@media all  and (min-width: 992px){
+    .question-type{
+        padding:0px 100px;
+    }
 }

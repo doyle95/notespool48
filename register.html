@@ -30,7 +30,7 @@
         <nav>
             <label for="drop" class="toggle menu-heading">&#9776; Menu</label>
             <input type="checkbox" id="drop"/>
-            <ul class="menu">
+            <ul class="menu"> 
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li>
@@ -60,55 +60,76 @@
         <div class="ncss-col l6 m12 offset-l3">
             <div class="login-form">
                 <div class="ncss-container">
-                    <h5 class="text-center ncss-border-bottom ncss-text-primary">Login</h5>
+                    <h5 class="text-center ncss-border-bottom ncss-text-primary">Register</h5>
                 </div>
                 <div class="ncss-container" action="/action_page.php">
                     <div class="ncss-row-padding">
                         <div class="ncss-col l2 m2">
-                            <label class="ncss-control-label" for="email">Email</label>
+                            <label class="ncss-control-label" for="name">Name</label>
                         </div>
                         <div class="ncss-col l8 m8 ncss-margin-bottom">
-                            <input class="ncss-input" name="email" id="email" type="text" placeholder="Email">
+                            <input class="ncss-input" name="name" id="name" type="text" placeholder="Name">
+                        </div>
+                        
+                    </div>
+                     
+                    <div class="ncss-row-padding">
+                        <div class="ncss-col l2 m2">
+                            <label class="ncss-control-label" for="name">ID No.</label>
+                        </div>
+                        <div class="ncss-col l8 m8 ncss-margin-bottom">
+                            <input class="ncss-input" name="studentid" id="studentid" type="text" placeholder="Enter your student ID No.">
+                        </div>
+                        
+                    </div> 
+
+                     
+
+
+                    
+                    <div class="ncss-row-padding">
+                        <div class="ncss-col l2 m2">
+                            <label class="ncss-control-label" for="email">Email</label>
+                        </div>
+                        <div class="ncss-col l8 m8">
+                            <input class="ncss-input ncss-margin-bottom" name="email" id="email" type="text" placeholder="username@connect.qut.edu.au">
                         </div>
                     </div>
                     <div class="ncss-row-padding">
                         <div class="ncss-col l2 m2">
-                            <label class="ncss-control-label" for="password">Password</label>
+                            <label class="ncss-control-label" for="email">Password</label>
                         </div>
                         <div class="ncss-col l8 m8">
                             <input class="ncss-input ncss-margin-bottom" name="password" id="password" type="text" placeholder="Password">
                         </div>
                     </div>
+
                     <div class="ncss-row-padding">
+                        <div class="ncss-col l2 m2">
+                            <label class="ncss-control-label" for="email">Confrim</label>
+                        </div>
+                        <div class="ncss-col l8 m8">
+                            <input class="ncss-input ncss-margin-bottom" name="confrim password" id="confrim password" type="text" placeholder="Confirm your Password">
+                        </div>
+                    </div>
+                     
+                           <div class="ncss-row-padding">
                         <div class="ncss-col l8 m8 offset-l2 offset-m2">
                             <p class="ncss-pull-left">
-                                <input class="ncss-check" type="checkbox" checked="checked">
-                                <label>Remember Me</label>
+                                <input class="ncss-check" type="checkbox"> 
+                                <label>I agree to the Terms of Use.</label>
                             </p>
 
                         </div>
                     </div>
+                  
 
                     <div class="ncss-row-padding">
                         <div class="ncss-col l8 offset-l2 offset-m2">
-                            <input type="submit" class="ncss-btn ncss-blue ncss-btn-mobile ncss-pull-left" value="Signin">
+                            <input type="submit" class="ncss-btn ncss-blue ncss-btn-mobile ncss-pull-left" value="Sign Up">
                         </div>
                     </div>
-                    <div class="ncss-row-padding">
-                        <div class="ncss-col l8 offset-l2 offset-m2">
-                            <label class="ncss-pull-left" for="sinin_org">Sign in as organization :</label>
-                        </div>
-                    </div>
-                    <div class="ncss-row-padding">
-                        <div class="ncss-col l8 m8 offset-l2 offset-m2">
-                            <input class="ncss-input ncss-margin-bottom" name="sinin_org" id="sinin_org" type="text" placeholder="eg: www.qut.edu.au">
-                        </div>
-                    </div>
-                    <div class="ncss-row-padding">
-                        <div class="ncss-col l8 offset-l2 offset-m2 ncss-margin-bottom">
-                            <input type="submit" class="ncss-btn ncss-default ncss-btn-mobile ncss-border-blue" value="Continue">
-                        </div>
-                    </div>
+                   
 
 
                 </div>
