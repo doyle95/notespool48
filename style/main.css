@@ -1,5 +1,7 @@
 
-
+.wrapper {
+    padding: 15px 100px 15px;
+}
 
 /* CSS Document */
 
@@ -12,16 +14,12 @@ body {
     padding: 0;
     word-wrap: break-word !important;
     font-family: 'Maria Pro', Maria, sans-serif;
-    padding: 15px 100px 15px;
     background: url('../img/bg.png')repeat-y;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #ccc;
-    height: 100%;
 }
-
 html,body,a,p,h1,h2,h3,h4,h5,input,textarea,select,button,label{
     font-family: Verdana, sans-serif,'Roboto', sans-serif;
     /*font-family: 'Roboto', sans-serif;*/
@@ -191,12 +189,23 @@ li > a:only-child:after {
     margin: 0 auto;
     color: #000;
     background: #F0F1F7;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:25px;
+}
+.border-radius-top{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 .basic_page{
     text-align: left !important;
     color: #000;
     background: #F0F1F7;
-	padding: 10px 20px 30px;
+    padding: 10px 20px 30px;
+    border-radius: 10px;
+ min-height:600px;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 /*End Login Form*/
 .video-container {
@@ -365,3 +374,61 @@ li > a:only-child:after {
         padding:0px 100px;
     }
 }
+
+/*Quizes*/
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+/*End Quizes*/
