@@ -1,13 +1,5 @@
 
-.wrapper {
-    padding: 15px 100px 15px;
-    background: url('../img/bg.png')repeat-y;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #ccc;
-}
+
 
 /* CSS Document */
 
@@ -20,7 +12,16 @@ body {
     padding: 0;
     word-wrap: break-word !important;
     font-family: 'Maria Pro', Maria, sans-serif;
+    padding: 15px 100px 15px;
+    background: url('../img/bg.png')repeat-y;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ccc;
+    height: 100%;
 }
+
 html,body,a,p,h1,h2,h3,h4,h5,input,textarea,select,button,label{
     font-family: Verdana, sans-serif,'Roboto', sans-serif;
     /*font-family: 'Roboto', sans-serif;*/
